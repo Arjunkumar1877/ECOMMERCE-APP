@@ -207,7 +207,6 @@ const SingleProduct = () => {
           <div className="row">
             <ProductCard />
 
-
           </div>
       </Container>
 

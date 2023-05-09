@@ -3,6 +3,7 @@ import ReactStars from "react-rating-stars-component";
 import { Link, useLocation } from 'react-router-dom';
 
 
+
 const ProductCard = (props) => {
 
   const {grid} = props;
@@ -12,12 +13,12 @@ const ProductCard = (props) => {
 
   <>
     <div className={` ${location.pathname === "/product" ? `gr-${grid}` : "col-3"}`}>
-    <Link to=':id' className='product-card position-relative'>
+    <Link to={`${ location.pathname === "/" ? "/product/:id" : location.pathname === "/product/:id" ? "/product/:id" : ":id" }`} className='product-card position-relative'>
         <div className="wishlist-icon position-absolute">
             <button className='border-0 bg-transparent'><i className="fa-regular fa-heart" style={{color: "red"}}></i></button>
         </div>
       <div className="product-image">
-        <img src="img/ipnone2.avif" alt="product-img" className='img-fluid'/>
+        <img src='img/ios2.avif' alt="product-img" className='img-fluid'/>
         <img src="img/iphone1.avif" alt="product-img" className='img-fluid'/>
       </div>
       <div className="product-details">
@@ -50,12 +51,12 @@ const ProductCard = (props) => {
     </div>
 
     <div className={` ${location.pathname === "/product" ? `gr-${grid}` : "col-3"}`}>
-    <Link className='product-card position-relative'>
+    <Link to={`${ location.pathname === "/" ? "/product/:id" : location.pathname === "/product/:id" ? "/product/:id" : ":id" }`}  className='product-card position-relative'>
         <div className="wishlist-icon position-absolute">
             <button className='bg-transparent border-0'><i className="fa-regular fa-heart" style={{color:"red"}}></i></button>
         </div>
-      <div className="product-image mg-fluid">
-        <img src="img/ipnone2.avif" alt="product-img" className='img-fluid' />
+      <div className="product-image img-fluid">
+        <img src='img/ios1.avif' alt="product-img" className='img-fluid' />
         <img src="img/iphone1.avif" alt="product-img" className='img-fluid' />
       </div>
       <div className="product-details">
